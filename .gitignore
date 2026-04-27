@@ -6,3 +6,6 @@ node_modules
 tmp/
 reports/
 report
+external-config.js
+b-external-config.js
+e-external-config.js

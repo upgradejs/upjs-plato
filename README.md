@@ -155,6 +155,8 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
       Specify a jshintrc file for JSHint linting
   -t, --title : String
       Title of the report
+  -T, --targetNode : Number
+      Target Node version for the depngn compatibility report. The -p options is required for depngn to run.
   -D, --date : String
       Time to use as the report date (seconds, > 9999999999 assumed to be ms)
   -n, --noempty
@@ -163,12 +165,27 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
       Specify a ESLint configuration file for ESLint linting
   -b, --babelConfig : String
       Specify a Babel configuration file for project parsing
+  -p, --projectRoot : String
+      Root directory of the project to analyze. Needed to run audit/outdated/depngn analysis. Must contain a "lock" file with the project's dependencies. If omitted, defaults to the current working directory.
 ```
 
-**Example**
+**Examples**
 
 ```shell
 upjs-plato -r -d report src
+# analyze the files in `src` dir and run audit and outdated. Stor the report in the `report` dir.
+```
+
+```shell
+upjs-plato -r -T 20 -r report src
+# analyze the files in `src` dir and run audit, outdated, and depng with node 20 as the target. Store the report in the `report` dir
+```
+
+```shell
+upjs-plato -r -p ./app1 -T 20 -r report ./app1/src
+# analyze the files in `app1/src` dir and run audit, outdated, and depng with node 20 as the target for the app in the `app1` directory. Store the report in the `report` dir
+
+# this is useful for mono-repos with multiple projects
 ```
 
 > Note for Windows Users:

@@ -156,7 +156,7 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
   -t, --title : String
       Title of the report
   -T, --targetNode : Number
-      Target Node version for the depngn compatibility report. The -p options is required for depngn to run.
+      Target Node version for the depngn compatibility report. The -p option is required for depngn to run.
   -D, --date : String
       Time to use as the report date (seconds, > 9999999999 assumed to be ms)
   -n, --noempty
@@ -173,17 +173,17 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
 
 ```shell
 upjs-plato -r -d report src
-# analyze the files in `src` dir and run audit and outdated. Stor the report in the `report` dir.
+# analyze the files in `src` dir and run audit and outdated. Store the report in the `report` dir.
 ```
 
 ```shell
-upjs-plato -r -T 20 -r report src
-# analyze the files in `src` dir and run audit, outdated, and depng with node 20 as the target. Store the report in the `report` dir
+upjs-plato -r -T 20 -d report src
+# analyze the files in `src` dir and run audit, outdated, and depngn with node 20 as the target. Store the report in the `report` dir
 ```
 
 ```shell
-upjs-plato -r -p ./app1 -T 20 -r report ./app1/src
-# analyze the files in `app1/src` dir and run audit, outdated, and depng with node 20 as the target for the app in the `app1` directory. Store the report in the `report` dir
+upjs-plato -r -p ./app1 -T 20 -d report ./app1/src
+# analyze the files in `app1/src` dir and run audit, outdated, and depngn with node 20 as the target for the app in the `app1` directory. Store the report in the `report` dir
 
 # this is useful for mono-repos with multiple projects
 ```

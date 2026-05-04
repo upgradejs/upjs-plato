@@ -66,5 +66,15 @@
     "long": "gitPath",
     "desc": "Specify a path to the folder containing .git folder",
     "type": "String"
+  },
+  "T": {
+    "long": "targetNode",
+    "desc": "Target Node version for the depngn compatibility report. The -p options is required for depngn to run.",
+    "type": "String"
+  },
+  "p": {
+    "long": "projectRoot",
+    "desc": "Root directory of the project to analyze. Needed to run audit/outdated/depngn analysis. Must contain a \"lock\" file with the project's dependencies.",
+    "type": "String"
   }
 }

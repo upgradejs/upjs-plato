@@ -201,6 +201,7 @@ upjs-plato -r -p ./app1 -T 20 -d report ./app1/src
 
 - Complexity from [typhonjs-escomplex](https://github.com/typhonjs-node-escomplex/typhonjs-escomplex)
 - Lint data from [eslint](http://eslint.org/)
+- Churn data from [git-churn-js](https://github.com/upgradejs/git-churn-js), collected automatically when the analyzed directory is inside a git repository. Use `-g` to point at a different repo (e.g. monorepos with nested `.git` directories), or expect churn to be silently skipped if no git repo is found.
 
 ## Contributors
 

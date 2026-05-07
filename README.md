@@ -167,6 +167,8 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
       Specify a Babel configuration file for project parsing
   -p, --projectRoot : String
       Root directory of the project to analyze. Needed to run audit/outdated/depngn analysis. Must contain a "lock" file with the project's dependencies. If omitted, defaults to the current working directory.
+  -g, --gitPath : String
+      Path to the folder containing the .git directory used for churn collection. If omitted, defaults to the project root. Useful for monorepos with nested git repositories. If the path is not a git repo, churn is silently skipped.
 ```
 
 **Examples**

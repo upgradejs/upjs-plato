@@ -21,6 +21,12 @@ The next release, currently `2.0.0` in `package.json`, will collect the work mer
 - README example for running via `npx upjs-plato`. ([#5](https://github.com/upgradejs/upjs-plato/pull/5))
 - README install instructions for Yarn and a note clarifying the `upjs-plato` executable name. ([#6](https://github.com/upgradejs/upjs-plato/pull/6))
 
+### Infrastructure
+
+- Replaced the non-functional Travis CI config with a GitHub Actions workflow running on Ubuntu and macOS across Node 20, 22, and 24. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
+- `engines.node` bumped from `>= 0.10.0` to `>= 18.0.0` to match what the codebase actually requires. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
+- `npm test` now runs `node --test test/*_test.js` (built-in test runner, no new dependencies) instead of the previous TODO placeholder. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
+
 ## [1.3.1] - 2023-05-16
 
 ### Changed

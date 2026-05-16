@@ -24,6 +24,11 @@
   "bin": "bin/plato",
   "license": "MIT",
   "main": "lib/plato",
+  "files": [
+    "bin/",
+    "lib/",
+    "LICENSE-MIT"
+  ],
   "engines": {
     "node": ">= 18.0.0"
   },

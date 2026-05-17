@@ -7,7 +7,7 @@ This project is a fork of [es6-plato](https://github.com/the-simian/es6-plato)
 
 ## Requirements
 
-`upjs-plato` requires **Node.js 18 or later**. CI verifies the package on Node 18, 22, and 24 across Ubuntu and macOS. Code coverage is reported on Node 22+ where the relevant test-runner flags are available.
+`upjs-plato` requires **Node.js 18 or later**. CI verifies the package on Node 18, 20, 22, and 24 across Ubuntu and macOS. Code coverage is reported on Node 22+ where the relevant test-runner flags are available.
 
 Node 16 was considered but is blocked by a transitive dependency (`yarn-audit-html`) that requires Node 18+.
 

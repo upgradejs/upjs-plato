@@ -23,7 +23,7 @@ The next release, currently `2.0.0` in `package.json`, will collect the work mer
 
 ### Infrastructure
 
-- Replaced the non-functional Travis CI config with a GitHub Actions workflow. CI now runs on Ubuntu and macOS across Node 18, 22, and 24. ([#8](https://github.com/upgradejs/upjs-plato/pull/8), [#12](https://github.com/upgradejs/upjs-plato/pull/12), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
+- Replaced the non-functional Travis CI config with a GitHub Actions workflow. CI now runs on Ubuntu and macOS across Node 18, 20, 22, and 24. ([#8](https://github.com/upgradejs/upjs-plato/pull/8), [#12](https://github.com/upgradejs/upjs-plato/pull/12), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
 - Code coverage is reported on every CI run on Node 22+ (where `--test-coverage-exclude` is available), using Node's built-in `--experimental-test-coverage` flag. ([#12](https://github.com/upgradejs/upjs-plato/pull/12), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
 - `engines.node` set to `>= 18.0.0` (was `>= 0.10.0`) to honestly reflect the supported range. Node 16 was investigated but blocked by a transitive `yarn-audit-html` engine requirement. ([#8](https://github.com/upgradejs/upjs-plato/pull/8), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
 - `npm test` now runs `node --test test/*_test.js` (built-in test runner, no new dependencies) instead of the previous TODO placeholder. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))

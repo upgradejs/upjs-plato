@@ -167,6 +167,8 @@ Usage : upjs-plato [options] -d <output_dir> <input files>
       Specify a Babel configuration file for project parsing
   -p, --projectRoot : String
       Root directory of the project to analyze. Needed to run audit/outdated/depngn analysis. Must contain a "lock" file with the project's dependencies. If omitted, defaults to the current working directory.
+  -g, --gitPath : String
+      Path to the folder containing the .git directory used for churn collection. If omitted, defaults to the project root. Useful for monorepos with nested git repositories. If the path is not a git repo, churn is silently skipped.
 ```
 
 **Examples**
@@ -199,6 +201,7 @@ upjs-plato -r -p ./app1 -T 20 -d report ./app1/src
 
 - Complexity from [typhonjs-escomplex](https://github.com/typhonjs-node-escomplex/typhonjs-escomplex)
 - Lint data from [eslint](http://eslint.org/)
+- Churn data from [git-churn-js](https://github.com/upgradejs/git-churn-js), collected automatically when the analyzed directory is inside a git repository. Use `-g` to point at a different repo (e.g. monorepos with nested `.git` directories), or expect churn to be silently skipped if no git repo is found.
 
 ## Contributors
 

@@ -5,6 +5,10 @@ Based on the older es5 plato, this is a port to `es6` and `eslint`
 
 This project is a fork of [es6-plato](https://github.com/the-simian/es6-plato)
 
+## Requirements
+
+`upjs-plato` requires **Node.js 16 or later**. CI verifies the package on Node 16, 18, 22, and 24 across Ubuntu and macOS. Code coverage is reported on Node 22+ where the relevant test-runner flags are available.
+
 # The Report
 ![dank-es6-nugs](https://cloud.githubusercontent.com/assets/954596/18904556/3a81efea-8524-11e6-8588-ad8f5a51b001.PNG)
 

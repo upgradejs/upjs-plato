@@ -23,9 +23,11 @@ The next release, currently `2.0.0` in `package.json`, will collect the work mer
 
 ### Infrastructure
 
-- Replaced the non-functional Travis CI config with a GitHub Actions workflow running on Ubuntu and macOS across Node 20, 22, and 24. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
-- `engines.node` bumped from `>= 0.10.0` to `>= 18.0.0` to match what the codebase actually requires. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
+- Replaced the non-functional Travis CI config with a GitHub Actions workflow. CI now runs on Ubuntu and macOS across Node 18, 20, 22, and 24. ([#8](https://github.com/upgradejs/upjs-plato/pull/8), [#12](https://github.com/upgradejs/upjs-plato/pull/12), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
+- Code coverage is reported on every CI run on Node 22+ (where `--test-coverage-exclude` is available), using Node's built-in `--experimental-test-coverage` flag. ([#12](https://github.com/upgradejs/upjs-plato/pull/12), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
+- `engines.node` set to `>= 18.0.0` (was `>= 0.10.0`) to honestly reflect the supported range. Node 16 was investigated but blocked by a transitive `yarn-audit-html` engine requirement. ([#8](https://github.com/upgradejs/upjs-plato/pull/8), [#13](https://github.com/upgradejs/upjs-plato/pull/13))
 - `npm test` now runs `node --test test/*_test.js` (built-in test runner, no new dependencies) instead of the previous TODO placeholder. ([#8](https://github.com/upgradejs/upjs-plato/pull/8))
+- Published tarball trimmed from 707 files / 4.6 MB to 75 files / 588 KB via a `files` allowlist in `package.json`. Dev-only files (`.github/`, `test/`, `.editorconfig`, etc.) are no longer shipped. ([#11](https://github.com/upgradejs/upjs-plato/pull/11))
 
 ## [1.3.1] - 2023-05-16
 

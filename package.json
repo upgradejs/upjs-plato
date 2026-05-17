@@ -30,10 +30,11 @@
     "LICENSE-MIT"
   ],
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 22.0.0"
   },
   "scripts": {
-    "test": "node --test test/*_test.js"
+    "test": "node --test test/*_test.js",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-exclude=\"test/**\" test/*_test.js"
   },
   "keywords": [
     "halstead",

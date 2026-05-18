@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-The next release, currently `2.0.0` in `package.json`, will collect the work merged to `main` since `1.3.1`. It has not yet been published to npm.
+## [2.0.0] - 2026-05-18
+
+First major release of `upjs-plato` since the fork. Collects the work merged to `main` since `1.3.1`.
 
 ### Added
 
@@ -15,6 +17,14 @@ The next release, currently `2.0.0` in `package.json`, will collect the work mer
 - **Dependencies reports** in the HTML output: audit (`yarn audit` / `npm audit`), outdated (`yarn outdated` / `npm outdated`), and depngn (Node engine compatibility). Two new CLI flags drive these:
   - `-p` / `--projectRoot`: directory containing the lockfile used by audit / outdated / depngn. Defaults to the current working directory.
   - `-T` / `--targetNode`: target Node major version for the depngn report. ([#3](https://github.com/upgradejs/upjs-plato/pull/3))
+
+### Changed
+
+- **Churn collection is now enabled by default** when the working directory is a git repo. `gitPath` defaults to `projectRoot` (which itself defaults to `cwd`), so the "Churn vs Complexity" chart populates without needing to pass `-g`. `-g` still works as an explicit override (e.g., for monorepos with nested `.git` directories). Non-git directories log a warning and continue instead of crashing. ([#7](https://github.com/upgradejs/upjs-plato/pull/7))
+
+### Fixed
+
+- "Churn vs Complexity" chart in the HTML report no longer renders blank. The serializer was reading `aggregate.complexity.cyclomatic` (undefined) instead of `aggregate.cyclomatic`; every point was getting `y: undefined` so Highcharts rendered nothing. This bug had been there since the chart was first added, but was masked because churn collection itself was opt-in. ([#7](https://github.com/upgradejs/upjs-plato/pull/7))
 
 ### Documentation
 

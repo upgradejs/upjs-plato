@@ -16,12 +16,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/upgradejs/upjs-plato"
+    "url": "git+https://github.com/upgradejs/upjs-plato.git"
   },
   "bugs": {
     "url": "https://github.com/upgradejs/upjs-plato/issues"
   },
-  "bin": "bin/plato",
+  "bin": {
+    "upjs-plato": "bin/plato"
+  },
   "license": "MIT",
   "main": "lib/plato",
   "files": [

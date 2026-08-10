@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.0] - 2026-05-18
+## [2.0.0] - 2026-08-10
 
 First major release of `upjs-plato` since the fork. Collects the work merged to `main` since `1.3.1`.
 
